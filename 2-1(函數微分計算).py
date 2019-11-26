@@ -10,21 +10,27 @@ def cos(x):
 
 def f(x):
     # print("a");
-    return sin(x) / abs(2*x);
+    return ( 2+sin(x/pi) ) / ( 2-sin(x/pi) );
+
+def DerivativeF(x):
+    # error value
+    h = 0.00000000001;
+    return ( f(x+h) - f(x) ) / h;
 
 
 # draw
-rangeX, rangeY = -10*pi, 10*pi;
+rangeX, rangeY = 0, 51;
 nodeCount = 487;
 xpoints = pylab.linspace(rangeX, rangeY, nodeCount);
 
 pylab.plot( xpoints, f(xpoints) );
+pylab.plot( xpoints, DerivativeF(xpoints) );
 # pylab.plot( xpoints, g(xpoints) );
 
 
 # final draw pic
 pylab.grid();
-pylab.title("This is quite fun though");
+pylab.title("AAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 pylab.xlabel("Xvideo");
 pylab.ylabel("Yvideo")
 pylab.show();
