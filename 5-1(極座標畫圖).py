@@ -12,7 +12,7 @@ angs = linspace(a, b, n)
 
 rs = sin(8*angs/7)
 
-pylab.polar( angs, rs, lw=5, label="SIN+COS" )
+pylab.polar( angs, rs, lw=5, label="8theta/7" )
 
 pylab.title("Polar Bear!", color='g')
 # pylab.legend()
